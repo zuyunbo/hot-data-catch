@@ -90,4 +90,7 @@ class SpiderV4(object):
 
 
 if __name__ == "__main__":
-   print('1')
+    baseurl = 'https://tophub.today/n/K7GdaMgdQy'
+    select_bre = SpiderV4(baseurl=baseurl)
+    datalist = select_bre.start_spider()
+    ToutiaoDataWriter().do_write(datalist)
